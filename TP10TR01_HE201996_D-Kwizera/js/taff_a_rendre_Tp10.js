@@ -1,29 +1,52 @@
 var combattant = [
-    {Nom:"a", Prenom:"b", Age:10, Taille :"petit", Ville:"Chicago"},
-    {Nom:"c", Prenom:"d", Age:15, Taille :"moyen", Ville:"Chicago"},
-    {Nom:"e", Prenom:"f", Age:10, Taille :"moyen", Ville:"Chicago"},
-    {Nom:"g", Prenom:"h", Age:14, Taille :"moyen", Ville:"Chicago"},
-    {Nom:"j", Prenom:"k", Age:10, Taille :"petit", Ville:"Chicago"},
-    {Nom:"l", Prenom:"m", Age:10, Taille :"grand", Ville:"Chicago"}
+    {nom:"Mayweather", prenom:"Floyd", age:43, taille :"petit", ville:"Michigan"},
+    {nom:"Mohamed", prenom:"Ali", age:74, taille :"grand", ville:"Scottsdale"},
+    
+
 ]
 
-
+/**
+ * J'insert les donnés du formulaires dans un nouvelle objet que je rajoute dans un tableau
+ * 
+ *@return {return}
+ */
 function genererTable(){
    let newSensei={};
 
-    newSensei.Nom=document.getElementById("nom").value
-    newSensei.Prenom=document.getElementById("prenom").value
-    newSensei.Age=document.getElementById("age").value
-    newSensei.Taille=document.getElementById("taille").value
-    newSensei.Ville=document.getElementById("ville").value
+    newSensei.nom=document.getElementById("nom").value;
+    newSensei.prenom=document.getElementById("prenom").value;
+    newSensei.age=document.getElementById("age").value;
+    newSensei.taille=document.getElementById("taille").value;
+    newSensei.ville=document.getElementById("ville").value;
 
-    combattant.push(newSensei)
-    console.log(combattant)
+    combattant.push(newSensei);
+    créationTable();
     return false 
 
 }
 
-function initialiserPage(){
+
+
+/**
+ *Rajouter des données dans mon nouvelle objet grace au formulaire et mon nouvelle objet se rajoute dans mon tableau
+ */
+
+function créationTable(){
+    let h = "";
+    for (let i in combattant) {
+        h += "<tr><td>"+ combattant[i].nom + " " + combattant[i].prenom + "</td>" + "<td>" + combattant[i].ville + "</td></tr>"
+        
+    }
+    document.getElementById("combat").innerHTML = h
 
 }
 
+
+
+
+
+
+
+
+/* tr => rentre dans la ligne
+td =>  c'est les cellules */
