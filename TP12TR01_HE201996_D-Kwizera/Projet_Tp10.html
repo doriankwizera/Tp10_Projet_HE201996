@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Dernier passage</title>
+    <script src="js/taff_a_rendre_Tp10.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/snitch.css">
+</head>
+<body onload="return creationTable()">
+<main> 
+    <section> 
+        <!-- Cette section contient le formulaire permettant d'encoder les données -->
+        <form action="#" onSubmit="return genererTable()">
+            <fieldset>
+                <legend>Enregister boxeur Legendaire et son club</legend>
+               <!-- nom -->
+                <label for="Nom">Nom:</label>
+                <input type="text" id="nom" name="nom"  required><br>
+                <!-- prenom -->
+                <label for="Nom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom"  required><br>
+                <!-- age -->
+                <label for="Nom">Age: </label>
+                <input id="age" name="age" type="number" min="18" max="120" step="1" value="18" required><br> 
+                <!-- taille -->
+                <label for="Nom">Taille : </label>
+                <select id="taille" name="importance">
+                  <option value="Entre 1,50 m et 1,65m" selected>1m50 à 1m65</option>
+                  <option value="Entre 1,65 m et 1,85m">1m65 à 1m85</option>
+                  <option value="Entre 1,85 m et 2,00m">1m85 à 2m</option>
+                </select><br>
+                <!-- ville -->
+                <label for="Nom">Ville du club:</label>
+                <input type="text" id="ville" name="ville"  required><br>
+                <input type="submit" value="Enregistrer Boxer">
+            </fieldset>
+        </form>
+    </section>
+    <section>
+        <button type="button" id="trier" onclick="trierOrdreAlphabetique();">Trier les noms par ordre alphabétique</button>
+        <button type="button" id="trier" onclick="trierAge();">Trier par âge</button>
+        <table id="tableau">
+            <thead>
+                <tr>
+                   <th>Combattant </th>
+                   <th>Âge</th>
+                   <th>Localisation de la salle de sport </th>
+                   <th>Taille </th>
+                </tr>
+            </thead>
+            <tbody id="combat">
+                
+
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer class='dbz'>
+    <p> 
+        <a href="https://github.com/doriankwizera/Tp10_Projet_HE201996.git">Lien github</a>
+        <img src="image/champion.jpg"></img> 
+    </p>
+</footer>
+</body>
+</html>
+

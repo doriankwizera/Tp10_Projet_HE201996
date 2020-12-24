@@ -1,0 +1,41 @@
+body{
+    font-family : Arial, Helvetica, sans-serif;
+    padding : 1%;
+    background-color: rgb(224, 235, 77);
+}
+
+
+#tableau{
+    border:1px solid black;
+    background-color:black;
+    margin: 10px 10px 10px 350px;
+
+
+}
+
+th{
+    background-color:darkorange ;
+}
+
+
+td{
+
+    background-color: lime;
+    
+}
+
+
+.dbz{
+    text-align: right;
+}
+
+footer img{
+
+    float : left;
+    width: 300px;
+    height : 200px;
+}
+
+#trier{
+    text-align:center;
+}
